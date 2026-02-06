@@ -1,18 +1,18 @@
-=== Plugin Name ===
-Contributors: maxchirkov
-Donate link: http://www.ibsteam.net/donate
+=== Simple Login Log ===
+Contributors: maxchirkov,apiosys
 Tags: login, log, users
-Requires at least: 3.0
-Tested up to: 4.7.5
-Stable tag: 1.1.3
+Requires at least: 6.5
+Tested up to: 6.9
+Stable tag: 2.0.0
+Requires PHP: 8.2
+License: MIT
+License URI: https://github.com/apio-sys/simple-login-log/blob/main/LICENSE
 
 This plugin keeps a log of WordPress user logins. Offers user and date filtering, and export features.
 
 == Description ==
 
 Simple log of user logins. Tracks user name, time of login, IP address and browser user agent.
-
-[Demo Video](http://screenr.com/kfEs "Demo Video")
 
 **Features include:**
 
@@ -28,11 +28,10 @@ Simple log of user logins. Tracks user name, time of login, IP address and brows
 - Russian [ru_RU]
 - Ukrainian [ua_UA]
 - Chinese [zh_CN] by [Mihuwa](http://www.mihuwa.com/)
-- French [fr_FR] by [Mehdi Hamida](http://www.lo-geek.fr/)
+- French [fr_FR] by Mehdi Hamida
 
 * Author: Max Chirkov
-* Author URI: [http://simplerealtytheme.com/](http://simplerealtytheme.com/ "Real Estate Themes & Plugins for WordPress")
-* Copyright: Released under GNU GENERAL PUBLIC LICENSE
+* Author: Joris Le Blansch
 
 == Installation ==
 
@@ -48,6 +47,8 @@ Screen Options are available at the top of the Login Log page. Click on the *Scr
 2. Login Log Management Screen.
 
 == Changelog ==
+= 2.0.0 - 2025-11-26 =
+* Code completely re-factored for modern standards.
 
 **Version 1.1.3**
 - Minor fix.
@@ -132,25 +133,6 @@ Screen Options are available at the top of the Login Log page. Click on the *Scr
 - Added option to log Failed Login Attempts.
 
 == Other Notes ==
-
-= Filters =
-
-** Log Output Within the Table **
-
-*sll-output-data* - filters table row array where array keys are column names and values is the output
-For example, we can use this filter to link IP addresses to a geo-location service:
-`
-<?php
-add_filter( 'sll-output-data', 'link_location_by_ip' );
-function link_location_by_ip($item){
-
-	//$item is a single row for columns with their values
-
-	$item['ip'] = sprintf('<a target="_blank"  href="http://infosniper.net/index.php?ip_address=%1$s&map_source=3&two_maps=1&overview_map=1&lang=1&map_type=1&zoom_level=11">%1$s</a>', $item['ip']);
-	return $item;
-}
-?>
-`
 
 = Translation =
 
