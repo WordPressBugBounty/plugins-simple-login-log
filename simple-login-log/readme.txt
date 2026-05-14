@@ -2,8 +2,8 @@
 Contributors: maxchirkov,apiosys
 Tags: login, log, users
 Requires at least: 6.5
-Tested up to: 6.9
-Stable tag: 2.0.1
+Tested up to: 7.0
+Stable tag: 2.0.2
 Requires PHP: 7.4
 License: MIT
 License URI: https://github.com/apio-sys/simple-login-log/blob/main/LICENSE
@@ -45,6 +45,9 @@ Screen Options are available at the top of the Login Log page. Click on the *Scr
 2. Login Log Management Screen.
 
 == Changelog ==
+= Version 2.0.2 - 2026-05-14 =
+* Fixed: broken monthly filters.
+
 = Version 2.0.1 - 2026-04-09 =
 * Fixed: _load_textdomain_just_in_time error (since WP 6.7).
 * Fixed: missing_direct_file_access_protection.
@@ -58,7 +61,8 @@ Screen Options are available at the top of the Login Log page. Click on the *Scr
 * Fixed : CVE-2025-49438.
 
 **Version 1.1.3**
-* Minor fix.
+
+- Minor fix.
 
 **Version 1.1.2**
 
